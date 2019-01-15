@@ -2,5 +2,11 @@
 
 @section('content')
     <h1>{{ $title }}</h1>
-    <p>This is the about page</p>
+    @if(count($services) > 0)
+        <ul class="list-group">
+        @foreach( $services as $service)
+            <li class='list-group-items'>{{ $service }}</li>
+        @endforeach
+        </ul>
+    @endif
 @endsection
