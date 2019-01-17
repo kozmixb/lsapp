@@ -6,7 +6,7 @@
     <div>
         {!!$post->body!!}
     </div>
-    <small>Written on {{$post->created_at}}</small>
+    <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
     <hr>
     <a href="/posts/{{$post->id}}/edit" class="btn btn-outline-secondary">Edit</a>
     {!!Form::open(['action'=>['PostController@destroy',$post->id],'method'=>'POST','class'=>'float-right'])!!}
